@@ -18,7 +18,8 @@ public class LoginActivity extends AppCompatActivity {
 
         cadastreSe.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {                startActivity(it);
+            public void onClick(View v) {
+                startActivity(it);
             }
         });
     }
