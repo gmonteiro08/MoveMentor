@@ -2,6 +2,7 @@ package com.example.movementor.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,6 @@ public class PesquisarFragment extends Fragment {
     private ArrayList<Servico> servicoList = new ArrayList<>();
     private FirebaseFirestore db;
 
-    @SuppressLint("MissingInflatedId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,11 +41,17 @@ public class PesquisarFragment extends Fragment {
         db = FirebaseFirestore.getInstance();
         loadDataFromFirestore();
 
+        for(Servico s : servicoList){
+            Log.i("LISTA", "onCreateView: " + s.toString());
+        }
+
+
+
         return view;
     }
 
     private void loadDataFromFirestore() {
-        db.collection("servicos")  // Substitua "servicos" pelo nome da sua coleção
+        db.collection("Servico")  // Substitua "servicos" pelo nome da sua coleção
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -63,6 +69,7 @@ public class PesquisarFragment extends Fragment {
     }
 
     private void loadUserName(String idUsuario, Servico servico) {
+        //idUsuario = "vh6FJzKn0b20wkt7miWE";
         db.collection("Usuarios")  // Substitua "usuarios" pelo nome da sua coleção
                 .document(idUsuario)  // Id do usuário
                 .get()

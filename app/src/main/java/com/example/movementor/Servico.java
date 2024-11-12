@@ -1,23 +1,28 @@
 package com.example.movementor;
 
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+
 import java.util.ArrayList;
 import java.util.Date;
 
+
 public class Servico {
     private int id;
-    private String id_usuário;
+    private String id_usuario;
     private String categoria;
     private String descricao;
     private String endereco;
     private Date data;
     private ArrayList<String> palavrasChave;
-    private double avaliacao;
+    private String avaliacao;
     private String nomeUsuario;
 
+    public Servico(){}
 
-    public Servico(int id, String id_usuário, String categoria, String descricao, String endereco, Date data, ArrayList<String> palavrasChave, double avaliacao) {
+
+    public Servico(int id, String id_usuario, String categoria, String descricao, String endereco, Date data, ArrayList<String> palavrasChave, String avaliacao) {
         this.id = id;
-        this.id_usuário = id_usuário;
+        this.id_usuario = id_usuario;
         this.categoria = categoria;
         this.descricao = descricao;
         this.endereco = endereco;
@@ -43,11 +48,11 @@ public class Servico {
     }
 
     public String getId_usuario() {
-        return id_usuário;
+        return id_usuario;
     }
 
     public void setId_usuário(String id_usuário) {
-        this.id_usuário = id_usuário;
+        this.id_usuario = id_usuário;
     }
 
     public String getCategoria() {
@@ -89,11 +94,11 @@ public class Servico {
     public void setPalavrasChave(ArrayList<String> palavrasChave) {
         this.palavrasChave = palavrasChave;
     }
-    public  double getAvaliacao(){
+    public  String getAvaliacao(){
         return avaliacao;
     }
 
-    public void setAvaliacao(double avaliacao) {
+    public void setAvaliacao(String avaliacao) {
         this.avaliacao = avaliacao;
     }
 }
