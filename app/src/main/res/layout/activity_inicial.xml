@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicialActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="659dp" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="205dp" />
+
+            <ImageView
+                android:id="@+id/img_solicitar_servico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/img_pesquisar"
+                app:layout_constraintEnd_toStartOf="@+id/img_chat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_pesquisar"
+                app:layout_constraintTop_toTopOf="@+id/img_pesquisar"
+                app:srcCompat="@drawable/baseline_add_circle_24" />
+
+            <ImageView
+                android:id="@+id/img_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/img_pesquisar"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/img_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/img_solicitar_servico"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_solicitar_servico"
+                app:layout_constraintTop_toTopOf="@+id/img_solicitar_servico"
+                app:srcCompat="@drawable/message_circle" />
+
+            <ImageView
+                android:id="@+id/img_pesquisar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/img_inicio"
+                app:layout_constraintEnd_toStartOf="@+id/img_solicitar_servico"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_inicio"
+                app:layout_constraintTop_toTopOf="@+id/img_inicio"
+                app:srcCompat="@drawable/search__1_" />
+
+            <TextView
+                android:id="@+id/txt_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Início"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_inicio"
+                app:layout_constraintStart_toStartOf="@+id/img_inicio"
+                app:layout_constraintTop_toBottomOf="@+id/img_inicio" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesquisar"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_pesquisar"
+                app:layout_constraintStart_toStartOf="@+id/img_pesquisar"
+                app:layout_constraintTop_toBottomOf="@+id/img_pesquisar"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="40dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solicitar"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_solicitar_servico"
+                app:layout_constraintStart_toStartOf="@+id/img_solicitar_servico"
+                app:layout_constraintTop_toBottomOf="@+id/img_solicitar_servico" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_chat"
+                app:layout_constraintStart_toStartOf="@+id/img_chat"
+                app:layout_constraintTop_toBottomOf="@+id/img_chat"
+                tools:layout_editor_absoluteX="310dp"
+                tools:layout_editor_absoluteY="40dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serviço"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerConteudo"
+        android:name="com.example.movementor.fragments.InicialFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_inicial"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
