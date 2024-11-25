@@ -1,9 +1,8 @@
 package com.example.movementor;
 
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
-
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 public class Servico {
@@ -13,14 +12,14 @@ public class Servico {
     private String descricao;
     private String endereco;
     private Date data;
-    private ArrayList<String> palavrasChave;
+    private List<String> palavrasChave;
     private String avaliacao;
     private String nomeUsuario;
 
     public Servico(){}
 
 
-    public Servico(int id, String id_usuario, String categoria, String descricao, String endereco, Date data, ArrayList<String> palavrasChave, String avaliacao) {
+    public Servico(int id, String id_usuario, String categoria, String descricao, String endereco, Date data, List<String> palavrasChave, String avaliacao) {
         this.id = id;
         this.id_usuario = id_usuario;
         this.categoria = categoria;
@@ -87,11 +86,11 @@ public class Servico {
         this.data = data;
     }
 
-    public  ArrayList<String> getPalavrasChave(){
+    public List<String> getPalavrasChave(){
         return palavrasChave;
     }
 
-    public void setPalavrasChave(ArrayList<String> palavrasChave) {
+    public void setPalavrasChave(List<String> palavrasChave) {
         this.palavrasChave = palavrasChave;
     }
     public  String getAvaliacao(){
